@@ -343,7 +343,7 @@ class ProfileFragment : Fragment() {
             setBackgroundColor(android.graphics.Color.parseColor("#DC2626"))
             setTextColor(android.graphics.Color.WHITE)
             setOnClickListener {
-                session.clearSession()
+                session.logout()
                 val intent = Intent(activity, MainActivity::class.java).apply {
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 }
