@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="72dp" />
 
-    <!-- Bottom App Bar with Cutout for Floating Button -->
+    <!-- Bottom App Bar with Cutout -->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         app:backgroundTint="#FFFFFF"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="16dp"
-        app:fabElevation="6dp">
+        app:elevation="8dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
@@ -50,4 +50,3 @@
         app:tint="#FFFFFF" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
