@@ -1,6 +1,7 @@
 package com.example.sampleapp
 
 import android.os.Bundle
+import android.content.Intent
 import android.os.CountDownTimer
 import android.text.Editable
 import android.text.TextWatcher
@@ -118,10 +119,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openDashboard() {
-        val userName = sessionManager.getUserName()
-        val userRole = sessionManager.getUserRole()
-        Toast.makeText(this, "Logged In: $userName ($userRole)", Toast.LENGTH_LONG).show()
-    }
+    val intent = Intent(this, DashboardActivity::class.java)
+    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+    startActivity(intent)
+    finish()
+}
+
 
     private fun sendOtpApi(email: String, tvResend: TextView) {
         val json = JSONObject().apply { put("email", email) }
